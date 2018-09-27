@@ -10,7 +10,7 @@ module.exports = function makeExchange(currency) {
   if (currency > 10000) return ERROR;
   else {
       
-	   if ( Math.floor(currency / 50) > 0) MoneyExchange["H"] = Math.floor( currency / 50);
+       if ( Math.floor(currency / 50) > 0) MoneyExchange["H"] = Math.floor( currency / 50);
        if ( Math.floor( (currency % 50) / 25 ) > 0 ) MoneyExchange["Q"] = Math.floor( (currency % 50) / 25);
        if ( Math.floor( (currency % 25) / 10 ) > 0 ) MoneyExchange["D"] = Math.floor( (currency % 25) / 10);
        if ( Math.floor ( ( (currency % 25) % 10) / 5) > 0 ) MoneyExchange["N"] = Math.floor ( ( (currency % 25) % 10) / 5);
